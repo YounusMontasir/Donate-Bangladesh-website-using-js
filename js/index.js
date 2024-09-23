@@ -12,15 +12,15 @@ function getInnerTextById (id){
 }
 
 
-document.getElementById('donate-btn1').addEventListener('click',function(){
+const donationButton1 = document.getElementById('donate-btn1')
+    donationButton1.addEventListener('click',function(){
     const donationAmount = parseFloat(getValueFromInput('donation-amount-1'))
     const currentBalance = parseFloat(getInnerTextById("total-amount"))
     const donationBalannce = parseFloat(getInnerTextById("donation-balance"))
-    console.log(typeof donationAmount);
     
-    if(isNaN(donationAmount))
+    if(isNaN(donationAmount) || donationAmount <= 0)
     {
-        alert("This is not a number")
+        alert("Invalid number")
         return
     }
 
@@ -28,7 +28,7 @@ document.getElementById('donate-btn1').addEventListener('click',function(){
 //    amount donate for noakhali
     const  totalDonatedAmount= donationAmount + donationBalannce;
     const remainingBalance = currentBalance - donationAmount
-    if(donationAmount > currentBalance){
+    if(donationAmount > currentBalance ){
         alert("You have insuffuicient balance")
         return
     }
@@ -44,5 +44,7 @@ document.getElementById('donate-btn1').addEventListener('click',function(){
         <p class= "opacity-70 font-light mt-4">${new Date().toLocaleString()}</p>
     `
     document.getElementById("history-section").appendChild(historyElement)
+    document.getElementById("my_modal_1").showModal();
+    document.getElementById("donation-amount-1").value = ""
 
 })
