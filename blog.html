@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- tailwind -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- lexend font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .lexend-font {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+<body>
+    <header class="sticky top-0">
+        <section class="bg-[#F9F7F3]">
+          <nav
+            class="flex justify-between items-center w-10/12 mx-auto pt-5 pb-16"
+          >
+            <button class="btn btn bg-[#B4F461] w-28 text-xl font-semibold">
+              Blog
+            </button>
+            <div class="flex items-center gap-4">
+              <img class="w-10 h-10" src="assets/logo.png" alt="" />
+              <p class="text-[#111111] text-xl font-semibold">
+                Donate Bangladesh
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img class="w-5 h-5" src="assets/coin.png" alt="" />
+              <p class="text-[#111111B3] text-xl font-semibold">5500</p>
+            </div>
+          </nav>
+        </section>
+        <div class="flex justify-center gap-4 mt-20 mb-8">
+          <button
+            class="btn btn bg-[#B4F461] px-8 text-xl text-center font-semibold"
+          >
+            Donation
+          </button>
+          <button
+            class="btn btn bg-white border-[#1111114D] w-28 text-xl font-semibold"
+          >
+            History
+          </button>
+        </div>
+      </header>
+      <main>
+
+          <!-- accordion section -->
+           <section class="w-10/12 mx-auto">
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+           </section>
+        </main>
+      
+</body>
+</html>
