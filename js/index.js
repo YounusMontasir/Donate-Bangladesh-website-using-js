@@ -33,8 +33,8 @@ function getInnerTextById (id){
 
 
 //    amount donate for noakhali
-    const  totalDonatedAmount= donationAmount + donationBalannce;
-    const remainingBalance = currentBalance - donationAmount
+    const  totalDonatedAmount= (donationAmount + donationBalannce);
+    const remainingBalance = (currentBalance - donationAmount)
     if(donationAmount > currentBalance ){
         alert("You have insuffuicient balance")
         return
