@@ -51,7 +51,8 @@ function getInnerTextById (id){
         ${places[cardNumber]}</p>
         <p class= "opacity-70 font-light mt-4">${new Date().toLocaleString()}</p>
     `
-    document.getElementById("history-section").appendChild(historyElement)
+    const newHistoryElement = document.getElementById("history-section")
+    newHistoryElement.insertBefore(historyElement,newHistoryElement.firstChild )
     document.getElementById(`my_modal_${cardNumber}`).showModal();
     document.getElementById(`donation-amount-${cardNumber}`).value = ""
 
